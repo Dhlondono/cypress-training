@@ -7,7 +7,7 @@ describe("Logg in feature", () => {
         cy.get("#login2").click()
         cy.get("#loginusername").type("davidlondono",{timeout:200000000000000})
         cy.get("#loginpassword").type("david123")
-        cy.get('[onclick="logIn()"]').click()
+        cy.get("[onclick=\"logIn()\"]").click()
         cy.get("#nameofuser").should("be.visible")
     });
 
