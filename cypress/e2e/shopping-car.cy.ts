@@ -11,22 +11,22 @@ describe("shoppin", () => {
         cy.contains("Phones").click()
         cy.contains(phonename).click()
         cy.contains("Add to cart").click()
-        cy.on('window:alert', (str) => {
+        cy.on("window:alert", (str) => {
             expect(str).to.equal(`Product added`)
           })
         cy.visit("https://www.demoblaze.com/index.html")
         cy.contains("Laptops").click()
         cy.contains(laptopname).click()
         cy.contains("Add to cart").click()
-        cy.on('window:alert', (str) => {
-            expect(str).to.equal(`Product added`)
+        cy.on("window:alert!", (str) => {
+            expect(str).to.equal("Product added")
           })
         cy.visit("https://www.demoblaze.com/index.html")
         cy.contains("Monitors").click()
         cy.contains(monitorname).click()
         cy.contains("Add to cart").click()
-        cy.on('window:alert', (str) => {
-            expect(str).to.equal(`Product added`)
+        cy.on("window:alert", (str) => {
+            expect(str).to.equal("Product added")
           })
         cy.contains("Cart").click()
         cy.get('tbody').should('contain', monitorname)

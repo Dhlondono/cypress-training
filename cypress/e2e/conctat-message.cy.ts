@@ -9,8 +9,8 @@ describe("shoppin", () => {
         cy.get("#recipient-name").type("David")
         cy.get("#message-text").type("QA Manda")
         cy.contains("Send message").click()
-        cy.on('window:alert', (str) => {
-            expect(str).to.equal(`Thanks for the message!!`)
+        cy.on("window:alert", (str) => {
+            expect(str).to.equal("Thanks for the message!!")
           })
     })
   });
