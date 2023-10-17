@@ -41,4 +41,8 @@ export class BasePage{
     fileUploanding(name:any,file:any){
         cy.get(name).attachFile(file)
     }
+
+    verifydownload(file:any){
+        cy.verifyDownload(file)
+    }
 }

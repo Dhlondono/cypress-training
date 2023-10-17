@@ -1,5 +1,7 @@
 import { defineConfig } from "cypress";
 
+const { verifyDownloadTasks } = require('cy-verify-downloads');
+
 module.exports = defineConfig({
   e2e: {
     reporter: "cypress-multi-reporters",
@@ -15,7 +17,9 @@ module.exports = defineConfig({
 },
     video: false,
     screenshotOnRunFailure: false,
-    setupNodeEvents(on, config) {},
+    setupNodeEvents(on, config) {
+      on('task', verifyDownloadTasks);
+    },
     baseUrl: "https://www.demoblaze.com/index.html",
     defaultCommandTimeout: 20000,
     pageLoadTimeout: 20000,
