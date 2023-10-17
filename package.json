@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "scripts": {
     "clean:reports": "rm -R -f cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
     "pretest": "npm run clean:reports",
@@ -33,20 +32,5 @@
     "mochawesome-report-generator": "^6.2.0",
     "typescript": "^5.2.2"
   }
-=======
-  "name": "cypress-training",
-  "version": "1.0.0",
-  "description": "This is a Workshop about Cypress",
-  "main": "index.js",
-  "scripts": {
-    "test": "cypress open"
-  },
-  "keywords": [
-    "ui-testing",
-    "practice",
-    "cypress"
-  ],
-  "author": "David Londoño,colon20695@gmail.com,https://github.com/Dhlondono",
-  "license": "MIT"
->>>>>>> 494750954c9038b087c72132f54e0b3b53342ff3
+  
 }
