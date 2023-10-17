@@ -37,4 +37,8 @@ export class BasePage{
     verifyByName(name:any){
         cy.contains(name).should("be.visible")
     }
+
+    fileUploanding(name:any,file:any){
+        cy.get(name).attachFile(file)
+    }
 }
