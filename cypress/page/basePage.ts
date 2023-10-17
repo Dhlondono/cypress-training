@@ -25,4 +25,16 @@ export class BasePage{
     verifyByClass(name:any,text:any){
         cy.get(name).should("contain", text)
     }
+
+    inputDate(name:any,date:any){
+        cy.get(name).type(`{selectall}${date}{enter}`)
+    }
+
+    scrollOption(name:any){
+        cy.get(name).last().click({force: true}).type("{downArrow}{enter}")
+    }
+
+    verifyByName(name:any){
+        cy.contains(name).should("be.visible")
+    }
 }
