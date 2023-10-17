@@ -1,5 +1,5 @@
 import 'cypress-file-upload';
-require('cy-verify-downloads').addCustomCommand();
+import 'cypress-iframe';
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite

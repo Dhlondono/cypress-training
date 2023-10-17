@@ -45,4 +45,16 @@ export class BasePage{
     verifydownload(file:any){
         cy.verifyDownload(file)
     }
+
+    visitPage(page:any){
+        cy.visit(page)
+    }
+
+    verifyframebyName(name:any){
+        cy.iframe().contains(name).should("be.visible")
+    }
+
+    clickIframe(name:any){
+        cy.iframe().find(name).click()
+    }
 }

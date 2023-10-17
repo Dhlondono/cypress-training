@@ -21,7 +21,7 @@ module.exports = defineConfig({
       on('task', verifyDownloadTasks);
     },
     baseUrl: "https://www.demoblaze.com/index.html",
-    defaultCommandTimeout: 20000,
-    pageLoadTimeout: 20000,
+    defaultCommandTimeout: 30000,
+    pageLoadTimeout: 30000,
   },
 });
